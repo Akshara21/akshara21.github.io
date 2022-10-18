@@ -3,15 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import React from 'react';
 import { useState, useEffect } from "react";
-// import { Navbar, Nav, Container } from "react-bootstrap";
+import { HashLink } from 'react-router-hash-link';
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
-// import {
-//     BrowserRouter as Router
-//   } from "react-router-dom";
+import {
+    BrowserRouter as Router
+  } from "react-router-dom";
   
   export const NavBar = () => {
   
@@ -37,7 +37,7 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
     }  
     
     return (
-        // <Router>
+        <Router>
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home">
@@ -59,14 +59,14 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
                 <a href="#"><img src={navIcon3} alt="" /></a>
               </div>
           
-              {/* <HashLink to='#connect'> */}
+              <HashLink to='#connect'>
                 <button className="vvd" onClick={() => console.log('connect')}><span>Let’s Connect</span></button>
-              {/* </HashLink> */}
+              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    //    </Router>
+       </Router>
         
       );
 }
